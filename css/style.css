@@ -1,4 +1,8 @@
+/* Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* Colors */
 
 :root {
     --color-primary: #2584ff;
@@ -7,6 +11,8 @@
     --color-headings: #1b0760;
     --color-body: #918ca4;
 }
+
+/* Typography */
 
 html {
     font-size: 16px;
@@ -41,6 +47,8 @@ p {
     margin-top: 0;
 }
 
+/* Media query for typography */
+
 @media screen and (min-width: 1024px) {
     body {
         font-size: 1.8rem;
@@ -57,5 +65,36 @@ p {
     h3 {
         font-size: 2.4rem;
 
+    }
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow::after {
+    content: "-->";
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+/* Media query for links */
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
     }
 }
